@@ -13,8 +13,105 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+.theme-light {
+  --main-font-weight: 400;
+  --card-title-weight: 700;
+  --bg-color:#FFFFFF;
+  --background-image-patter : url(/svg/pattern-light.svg);
+  --accent-color:rgba(0, 0, 0, 1);
+}
+.theme-dark {
+  --main-font-weight: 465;
+  --card-title-weight: 785;
+  --bg-color:rgba(0, 0, 0, 1);
+  --accent-color:rgba(0, 204, 20, 1);
+  --background-image-patter : url(/svg/pattern-dark.svg);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-weight: 465;
+    --card-title-weight: 785;
+    --bg-color:rgba(0, 0, 0, 1);
+    --accent-color:rgba(0, 204, 20, 1);
+    --background-image-patter : url(/svg/pattern-dark.svg);
+  }
+}
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font-family), Arial, sans-serif;
+  font-variation-settings: "wght" var(--main-font-weight);
+  color:var(--accent-color);
+  background-image: var(--background-image-patter);
+  background-color: var(--bg-color);
+  background-position: center;
+  background-repeat: repeat repeat;
+  background-size: 4px;
+}
+.content-section {
+  width:var(--content-section-width);
+}
+.header {
+  font-family: var(--accent-font-family), Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-color);
+}
+
+.header__title {
+  font-size: var(--header-title-font-size);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 136px;
+  margin-bottom: 20px;
+}
+.header__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.upper-case-text{
+  text-transform: uppercase;
+}
+.header__theme-menu {
+  margin-left: auto;
+  margin-right: auto;
+}
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap:14px; 
+  margin-bottom: 25px;
+}
+
+.theme-menu__item {
+  font-size: 14px;
+}
+
+.theme-menu__button {
+  color:currentColor;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 13px 0 13px;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+}
+.theme-menu__button:disabled {
+  opacity: 60%;
+}
+.floppy {
+}
+@media (max-width: 375px) {
+  :root {
+    --content-section-width: 100%;
+  }
 }
