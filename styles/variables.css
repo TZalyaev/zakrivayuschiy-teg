@@ -6,7 +6,6 @@
     --card-title-weight: 700;
     --bg-color:#FFFFFF;
     --accent-color:rgba(0, 0, 0, 1);
-    --header-title-font-size: 65px;
     --background-image-patter : url(/svg/pattern-light.svg);
-    --content-section-width: 48.33%;
+    --content-section-width: clamp(23.188rem, 16.009rem + 30.545vw, 43.5rem);
 }
