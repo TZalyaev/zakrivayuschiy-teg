@@ -1,12 +1,16 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
 :root {
-    --main-font-family:"Inter-Variable"; 
-    --accent-font-family: "PressStart2P", Arial, sans-serif; 
-    --main-font-weight: 400;
-    --card-title-weight: 700;
-    --bg-color:#FFFFFF;
-    --accent-color:rgba(0, 0, 0, 1);
-    --background-image-patter : url(/svg/pattern-light.svg);
-    --content-section-width: clamp(23.188rem, 16.009rem + 30.545vw, 43.5rem);
-    --heart-contour-color: rgba(0, 0, 0, 1);
-    --heart-fill-color: rgba(255, 0, 0, 1);
+--main-font-family: "Inter-Variable";
+--accent-font-family: "PressStart2P", Arial, sans-serif;
+--main-font-weight: 400;
+--card-title-weight: 700;
+--bg-color: #ffffff;
+--accent-color: rgba(0, 0, 0, 1);
+--background-image-patter: url(/svg/pattern-light.svg);
+--content-section-width: clamp(23.188rem, 16.009rem + 30.545vw, 43.5rem);
+--heart-contour-color: rgba(0, 0, 0, 1);
+--heart-fill-color: rgba(255, 0, 0, 1);
 }

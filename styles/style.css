@@ -166,6 +166,7 @@
 }
 
 .post__image {
+  display: block;
   width: 100%;
   border-bottom: 2px solid var(--accent-color);
   border-top: 2px solid var(--accent-color);
