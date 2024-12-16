@@ -77,6 +77,7 @@
   text-align: center;
   margin-top: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
   margin-bottom: 20px;
+  line-height: 1;
 }
 
 .header__subtitle {
@@ -168,8 +169,6 @@
 .post__image {
   display: block;
   width: 100%;
-  border-bottom: 2px solid var(--accent-color);
-  border-top: 2px solid var(--accent-color);
 }
 
 .post {
@@ -183,9 +182,6 @@
   padding: 3px 24px 3px 10px;
   line-height: 1.21;
   text-align: left;
-  border-right: 2px solid var(--accent-color);
-  border-left: 2px solid var(--accent-color);
-  border-top: 2px solid var(--accent-color);
 }
 
 .post__text-section {
@@ -203,7 +199,7 @@
   display: flex;
   justify-content: end;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .card__icon-button {
@@ -351,6 +347,8 @@
 .floppy-icon {
   position: relative;
   z-index: 2;
+  width: 21px;
+  height: 21px;
 }
 
 @keyframes arrow-movement {
@@ -388,5 +386,12 @@
 @media (max-width: 375px) {
   :root {
     --content-section-width: 100%;
+  }
+  .footer__button {
+    flex-direction: column;
+  }
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
   }
 }
