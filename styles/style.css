@@ -57,6 +57,8 @@
   margin-left: auto;
   margin-right: auto;
   background-color: var(--bg-color);
+}
+.section-with-borders {
   border: 2px solid var(--accent-color);
 }
 .header {
@@ -82,6 +84,7 @@
   text-align: center;
   margin-bottom: 25px;
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  line-height: 1;
 }
 .upper-case-text{
   text-transform: uppercase;
@@ -95,10 +98,12 @@
   flex-direction: column;
   gap:14px; 
   margin-bottom: 25px;
+  margin-left: 20px;
 }
 
 .theme-menu__item {
   font-size: 14px;
+  line-height: 1;
 }
 
 .theme-menu__button {
@@ -112,6 +117,7 @@
   text-align: center;
   font-weight: normal;
   transition: opacity 300ms 0ms ease;
+  line-height: 1;
 }
 .theme-menu__button:disabled {
   opacity: 60%;
@@ -150,6 +156,8 @@
 }
 .post__image {
   width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .post {
   display: flex;
@@ -158,8 +166,9 @@
 .post__title {
   font-size: 18px;
   font-variation-settings: "wght" var(--card-title-weight);
-  padding: 3px 10px 3px 10px;
-  border-bottom: 2px solid var(--accent-color);
+  padding: 3px 24px 3px 10px;
+  line-height: 1.21;
+  text-align: left;
 }
 .post__text-section {
   display: flex;
@@ -173,13 +182,14 @@
 .post__like-button-group {
   display: flex;
   justify-content: end;
-  margin-bottom: 25px;
-  margin-right: 25px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 .card__icon-button {
   border: none;
   background-color: transparent;
-  margin-right: 12px;
+  margin-right: 1px;
+  margin-top: 2px;
 }
 .button-with-borders {
   border: 2px solid var(--accent-color);
@@ -213,6 +223,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
+  line-height: 0.9;
 }
 .button__text:hover {
   color:inherit;
@@ -284,7 +295,7 @@
   animation: heart-sparks-animation 300ms ease-in 300ms 2 alternate;
 }
 .footer {
-  margin-top: 52px;
+  margin-top: 48px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -292,7 +303,7 @@
   margin-bottom: 100px;
 }
 .footer__button {
-  padding: 18.5px 21px 18.5px 19px;
+  padding: 15px 21px 15px 19px;
   gap: 8px;
 }
 .floppy-icon {
