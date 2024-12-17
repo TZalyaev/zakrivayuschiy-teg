@@ -111,7 +111,6 @@
   height: 2px;
   margin-top: -2px;
   opacity: 100%;
-  transition: none;
   background-color: currentColor;
   transform: scaleX(0);
   transition: opacity 300ms 0ms ease, transform 300ms 0ms ease;
@@ -246,10 +245,6 @@
   outline: none;
 }
 
-.like-icon {
-  margin: auto;
-}
-
 .sparks {
   opacity: 0;
   fill: var(--heart-fill-color);
@@ -272,6 +267,7 @@
 
 .like-icon {
   overflow: visible;
+  margin: auto;
 }
 
 .like-icon:hover .core {
