@@ -13,8 +13,337 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font-family), Arial, sans-serif;
+  font-variation-settings: "wght" var(--main-font-weight);
+  color: var(--accent-color);
+  background-image: var(--background-image-patter);
+  background-color: var(--bg-color);
+  background-position: center;
+  background-repeat: repeat repeat;
+  background-size: 4px;
+  background-attachment: fixed;
+}
+.content-section {
+  width: var(--content-section-width);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-color);
+}
+.section-with-borders {
+  border: 2px solid var(--accent-color);
+}
+
+.header {
+  font-family: var(--accent-font-family), Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.header__title {
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
+  margin-bottom: 20px;
+  line-height: 1em;
+}
+
+.header__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  line-height: 1em;
+}
+
+.upper-case-text {
+  text-transform: uppercase;
+}
+
+.header__theme-menu {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.theme-menu__item {
+  font-size: 14px;
+  line-height: 1em;
+}
+
+.theme-menu__button {
+  color: currentColor;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 13px 0 13px;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  transition: opacity 300ms 0ms ease;
+  line-height: 1em;
+}
+
+.theme-menu__button:disabled {
+  opacity: 60%;
+  position: relative;
+  pointer-events: none;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: -2px;
+  opacity: 100%;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: opacity 300ms 0ms ease, transform 300ms 0ms ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 60%;
+}
+
+.theme-menu__button:focus-visible::after {
+  content: "";
+  opacity: 60%;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.theme-menu__button:hover {
+  opacity: 60%;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: arrow-movement alternate ease-in-out infinite 500ms;
+}
+
+.post__image-container {
+  width: 100%;
+}
+.post__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__title {
+  font-size: 18px;
+  font-variation-settings: "wght" var(--card-title-weight);
+  padding: 3px 24px 3px 10px;
+  line-height: 1.21em;
+  text-align: left;
+}
+
+.post__text-section {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 25px;
+}
+
+.post__text:not(:last-of-type) {
+  margin-bottom: 27px;
+}
+
+.post__like-button-group {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+  margin-right: 25px;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: transparent;
+  margin-right: 12px;
+  display: flex;
+  padding: 0;
+}
+
+.button-with-borders {
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-font-family), Arial, sans-serif;
+  background-color: var(--bg-color);
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+  justify-content: center;
+  transition: color 1s ease, box-shadow 300ms 0ms ease;
+}
+
+.button-with-borders::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+}
+
+.button-with-borders:hover {
+  color: var(--bg-color);
+}
+
+.button-with-borders:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.button__text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  line-height: 0.9em;
+}
+
+.button__text:hover {
+  color: inherit;
+}
+
+.button-with-borders:focus {
+  outline: none;
+}
+
+.button-with-borders:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  padding: 0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.sparks {
+  opacity: 0;
+  fill: var(--heart-fill-color);
+}
+
+.contour {
+  fill: var(--heart-contour-color);
+  transition: fill 100ms linear;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 300ms linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 300ms 30ms linear;
+}
+
+.like-icon {
+  overflow: visible;
+  margin: auto;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-contour-color);
+  transition: fill 300ms linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-contour-color);
+  transition: fill 300ms 50ms linear;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-fill-color);
+  transition: fill 300ms linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-fill-color);
+  transition: fill 300ms 50ms linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-fill-color);
+  transition: fill 300ms linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill-color);
+  transition: fill 300ms 50ms linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill-color);
+  transition: fill 300ms 60ms linear;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-beating 300ms ease-in 100ms;
+}
+
+.like-icon.is-liked .sparks {
+  animation: heart-sparks-animation 300ms ease-in 300ms;
+}
+
+.footer {
+  margin-top: 48px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-bottom: 100px;
+}
+
+.footer__button {
+  padding: 15px 21px 15px 19px;
+  gap: 8px;
+}
+
+.floppy-icon {
+  position: relative;
+  z-index: 2;
+  width: 21px;
+  height: 21px;
+}
+
+
+@media (max-width: 375px) {
+  :root {
+    --content-section-width: 100%;
+  }
+  .footer__button {
+    flex-direction: column;
+  }
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
 }

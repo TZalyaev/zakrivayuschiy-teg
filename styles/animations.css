@@ -12,3 +12,43 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes arrow-movement {
+    0% {
+      left: -6px;
+    }
+  
+    100% {
+      left: -2px;
+    }
+  }
+  
+  @keyframes heart-beating {
+    0% {
+      transform: scale(1, 1);
+      transform-origin: center;
+    }
+  
+    50% {
+      transform: scale(1.5, 1.5);
+      transform-origin: center;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        transform-origin: center;
+      }
+  }
+  
+  @keyframes heart-sparks-animation {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+      }
+  }
