@@ -9,8 +9,14 @@
 --card-title-weight: 700;
 --bg-color: #ffffff;
 --accent-color: rgba(0, 0, 0, 1);
---background-image-patter: url(/svg/pattern-light.svg);
+--background-image-color-main: rgba(211, 211, 211, 1);
+--background-image-color-support: rgba(211, 211, 211, 0);
+--background-image-color-up: #e7e7e7;
+--background-image-color-down: #1a1a1a;
+--gradient-start-point: 0.01%;
 --content-section-width: clamp(23.188rem, 16.009rem + 30.545vw, 43.5rem);
 --heart-contour-color: rgba(0, 0, 0, 1);
 --heart-fill-color: rgba(255, 0, 0, 1);
+--card-label-outline-color: rgba(255, 255, 255, 1);
+--button-text-color: var(--bg-color);
 }

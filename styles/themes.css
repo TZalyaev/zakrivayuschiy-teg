@@ -16,8 +16,14 @@
     --card-title-weight: 785;
     --bg-color: rgba(0, 0, 0, 1);
     --accent-color: rgba(0, 204, 20, 1);
-    --background-image-patter: url(/svg/pattern-dark.svg);
     --heart-contour-color: rgba(0, 204, 20, 1);
+    --background-image-color-main: rgba(0, 0, 0, 1);
+    --background-image-color-support: rgba(0, 0, 0, 0);
+    --background-image-color-up: #007f0c;
+    --background-image-color-down: #004306;
+    --gradient-start-point: 0%;
+    --card-label-outline-color: rgba(0, 0, 0, 1);
+    --button-text-color: var(--accent-color);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -25,6 +31,12 @@
       --card-title-weight: 785;
       --bg-color: rgba(0, 0, 0, 1);
       --accent-color: rgba(0, 204, 20, 1);
-      --background-image-patter: url(/svg/pattern-dark.svg);
+      --background-image-color-main: rgba(0, 0, 0, 1);
+      --background-image-color-support: rgba(0, 0, 0, 0);
+      --background-image-color-up: #007f0c;
+      --background-image-color-down: #004306;
+      --gradient-start-point: 0%;
+      --card-label-outline-color: rgba(0, 0, 0, 1);
+      --button-text-color: var(--accent-color);
     }
   }
